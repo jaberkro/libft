@@ -6,7 +6,7 @@
 /*   By: jaberkro <jaberkro@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/22 20:59:15 by jaberkro      #+#    #+#                 */
-/*   Updated: 2021/10/22 21:04:30 by jaberkro      ########   odam.nl         */
+/*   Updated: 2022/01/05 10:54:26 by Jorien        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 /* Allocates (with malloc(3)) and returns a new
 string, which is the result of the concatenation
 of ’s1’ and ’s2’.
+
+This function does not free s1, you have to handle that yourself.
  */
