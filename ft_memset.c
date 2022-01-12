@@ -6,7 +6,7 @@
 /*   By: jaberkro <jaberkro@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/18 20:36:21 by jaberkro      #+#    #+#                 */
-/*   Updated: 2021/10/18 20:42:33 by jaberkro      ########   odam.nl         */
+/*   Updated: 2022/01/12 12:05:39 by jaberkro      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,4 @@ void	*ft_memset(void	*b, int c, size_t len)
 /*  The memset() function writes len bytes of value c (converted to an
      unsigned char) to the string b.
 	 The memset() function returns its first argument.
- */
+*/
