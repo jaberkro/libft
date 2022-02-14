@@ -6,11 +6,10 @@
 /*   By: jaberkro <jaberkro@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/19 21:12:24 by jaberkro      #+#    #+#                 */
-/*   Updated: 2022/02/14 16:39:52 by jaberkro      ########   odam.nl         */
+/*   Updated: 2022/02/14 18:14:57 by jaberkro      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
