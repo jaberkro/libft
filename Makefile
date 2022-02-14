@@ -6,7 +6,7 @@
 #    By: jaberkro <jaberkro@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/10/18 18:15:51 by jaberkro      #+#    #+#                  #
-#    Updated: 2022/01/05 09:30:53 by Jorien        ########   odam.nl          #
+#    Updated: 2022/02/14 16:46:37 by jaberkro      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,10 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
 	ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 	ft_putnbr_fd.c ft_intlen.c ft_printf.c ft_puthex_fd.c ft_putunbr_fd.c \
-	ft_isspace.c
+	ft_isspace.c 
+
+GNLSRC = get_next_line.c get_next_line_utils.c
+GNLOBJ = $(GNLSRC:.c=.o)
 
 BNS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 	ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
@@ -49,9 +52,12 @@ RESET	= \x1b[0m
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar -crs $(NAME) $(OBJ)
+$(NAME): $(OBJ) $(GNLOBJ)
+	ar -crs $(NAME) $(OBJ) $(GNLOBJ)
 	@echo "$(RED)Done $(GREEN)COM$(YELLOW)PI$(BLUE)LING $(PINK)LIBFT$(RESET) :)"
+
+$(GNLOBJ):
+	gcc -c $(FLAGS) -D BUFFER_SIZE=1 $(GNLSRC)
 
 %.o: %.c
 	gcc -c $(FLAGS) -I $(INC) -o $@ $<
@@ -60,7 +66,7 @@ bonus:
 	$(MAKE) WITH_BONUS=1 all
 
 clean:
-	rm -f $(NOBJ) $(BOBJ)
+	rm -f $(NOBJ) $(BOBJ) $(GNLOBJ)
 	@echo "$(RED)DONE $(GREEN)CLEANING$(YELLOW) LIBFT$(PINK) :)$(RESET)"
 
 fclean: clean
