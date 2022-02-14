@@ -6,7 +6,7 @@
 /*   By: Jorien <Jorien@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/03 13:44:58 by Jorien        #+#    #+#                 */
-/*   Updated: 2022/01/04 18:37:51 by Jorien        ########   odam.nl         */
+/*   Updated: 2022/02/14 16:34:52 by jaberkro      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int		ft_putnbr_fd(int n, int fd);
 int		ft_puthex_fd(unsigned long long n, int u, int fd);
 int		ft_putunbr_fd(unsigned int n, int fd);
 int		ft_printf(const char *fmt, ...);
+char	*get_next_line(int fd);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
