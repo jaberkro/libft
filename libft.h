@@ -6,7 +6,7 @@
 /*   By: Jorien <Jorien@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/03 13:44:58 by Jorien        #+#    #+#                 */
-/*   Updated: 2022/02/14 16:34:52 by jaberkro      ########   odam.nl         */
+/*   Updated: 2022/04/14 12:29:04 by jaberkro      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }				t_list;
+
+typedef struct s_dlist
+{
+	int				val;
+	struct s_dlist	*next;
+	struct s_dlist	*previous;
+}				t_dlist;
 
 int		ft_intlen(int n);
 int		ft_isalpha(int c);
@@ -74,5 +81,16 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+void	ft_dlstadd_back(t_dlist **dlst, t_dlist *new);
+void	ft_dlstadd_front(t_dlist **dlst, t_dlist *new);
+void	ft_dlstclear(t_dlist **dlst);
+t_dlist	*ft_dlstlast(t_dlist *dlst);
+int		ft_dlstlen(t_dlist *to_check);
+t_dlist	*ft_dlstnew(int value);
+int		ft_dlstpush(t_dlist **dlst1, t_dlist **dlst2);
+void	ft_dlstrev_rotate(t_dlist **dlst);
+void	ft_dlstrotate(t_dlist **dlst);
+void	ft_dlstswap(t_dlist **dlst);
 
 #endif

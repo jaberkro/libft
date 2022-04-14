@@ -6,7 +6,7 @@
 #    By: jaberkro <jaberkro@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/10/18 18:15:51 by jaberkro      #+#    #+#                  #
-#    Updated: 2022/02/14 16:46:37 by jaberkro      ########   odam.nl          #
+#    Updated: 2022/04/14 12:30:10 by jaberkro      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,10 @@ GNLOBJ = $(GNLSRC:.c=.o)
 
 BNS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 	ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-	ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+	ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c \
+	ft_dlstadd_back.c ft_dlstadd_front.c ft_dlstclear.c \
+	ft_dlstlast.c ft_dlstlen.c ft_dlstnew.c ft_dlstpush.c ft_dlstrev_rotate.c \
+	ft_dlstrotate.c ft_dlstswap.c
 
 NOBJ = $(SRC:.c=.o)
 
