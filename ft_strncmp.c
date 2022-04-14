@@ -6,7 +6,7 @@
 /*   By: jaberkro <jaberkro@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/22 15:56:03 by jaberkro      #+#    #+#                 */
-/*   Updated: 2022/01/04 19:22:56 by Jorien        ########   odam.nl         */
+/*   Updated: 2022/04/14 12:32:04 by jaberkro      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
      to, or less than 0, according as the string s1 is greater than, equal to,
      or less than the string s2.  The comparison is done using unsigned charac-
      ters, so that `\200' is greater than `\0'. */
-
