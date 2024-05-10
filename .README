@@ -3,10 +3,16 @@ Libft: a library with utility functions built from scratch.
 Include this library in other C projects:
 
 Move inside the project folder there you want to add the library.
+```
 cd <projectfolder>
+```
 
 Clone the library.
+```
 git clone git@github.com:jaberkro/libft.git 
+```
 
 Compile.
+```
 make bonus -C libft
+```
