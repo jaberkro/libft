@@ -14,6 +14,14 @@ NAME = libft.a
 
 INC = libft.h
 
+UNAME = $(shell uname)
+
+ifeq ($(UNAME), Linux)
+CC = cc
+else
+CC = gcc
+endif
+
 FLAGS = -Wall -Wextra -Werror
 
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
@@ -60,10 +68,10 @@ $(NAME): $(OBJ) $(GNLOBJ)
 	@echo "$(RED)Done $(GREEN)COM$(YELLOW)PI$(BLUE)LING $(PINK)LIBFT$(RESET) :)"
 
 $(GNLOBJ):
-	gcc -c $(FLAGS) -D BUFFER_SIZE=1 $(GNLSRC)
+	$(CC) -c $(FLAGS) -D BUFFER_SIZE=1 $(GNLSRC)
 
 %.o: %.c
-	gcc -c $(FLAGS) -I $(INC) -o $@ $<
+	$(CC) -c $(FLAGS) -I $(INC) -o $@ $<
 
 bonus: 
 	$(MAKE) WITH_BONUS=1 all
